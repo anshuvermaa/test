@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+ for the script dev
+    "dev": "cross-env NODE_OPTIONS='--inspect-brk' next dev",
 
 First, run the development server:
 
