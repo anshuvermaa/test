@@ -1,6 +1,7 @@
 
 import PdfPage from '@/components/pdfPage';
 import MainSidebar from '@/components/mainSidebar';
+import companyProps from '@/lib/props';
 
 type Props = {
   params: {
@@ -10,7 +11,7 @@ type Props = {
 
 export default async function Company({ params: { companyId } }: Props) {
   const siteUrl=process.env.NEXT_PUBLIC_SITE_URL;
-  const data = await fetch(`${siteUrl}/api/company/${companyId}`).then(res =>{return res.json()});
+  const data:companyProps = await fetch(`${siteUrl}/api/company/${companyId}`).then(res =>{return res.json()});
   if (!data) {
     throw new Error('Failed to load company');
   }
